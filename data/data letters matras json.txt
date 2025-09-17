@@ -1,0 +1,350 @@
+[
+  {
+    "id": "aa-matra",
+    "script": "ा",
+    "name_hi": "आ की मात्रा",
+    "category": "matra",
+    "roman": "ā",
+    "iast": "ā",
+    "ipa": "aː",
+    "audio": "/assets/audio/aa-matra.mp3",
+    "strokeSvg": "/assets/strokes/aa-matra.svg",
+    "examples": [
+      {
+        "hi": "का",
+        "base": "क",
+        "en": "ka",
+        "ipa": "kaː",
+        "audio": "/assets/audio/kaa.mp3"
+      },
+      {
+        "hi": "गा",
+        "base": "ग",
+        "en": "ga",
+        "ipa": "ɡaː",
+        "audio": "/assets/audio/gaa.mp3"
+      }
+    ],
+    "hints": ["This matra extends the consonant's vowel sound to 'aa' (like 'father'). It appears after the consonant."],
+    "position": "right"
+  },
+  {
+    "id": "i-matra",
+    "script": "ि",
+    "name_hi": "इ की मात्रा",
+    "category": "matra",
+    "roman": "i",
+    "iast": "i",
+    "ipa": "ɪ",
+    "audio": "/assets/audio/i-matra.mp3",
+    "strokeSvg": "/assets/strokes/i-matra.svg",
+    "examples": [
+      {
+        "hi": "कि",
+        "base": "क",
+        "en": "ki",
+        "ipa": "kɪ",
+        "audio": "/assets/audio/ki.mp3"
+      },
+      {
+        "hi": "गि",
+        "base": "ग",
+        "en": "gi",
+        "ipa": "ɡɪ",
+        "audio": "/assets/audio/gi.mp3"
+      }
+    ],
+    "hints": ["This matra creates the 'i' sound (like 'sit'). It appears before the consonant."],
+    "position": "left"
+  },
+  {
+    "id": "ii-matra",
+    "script": "ी",
+    "name_hi": "ई की मात्रा",
+    "category": "matra",
+    "roman": "ī",
+    "iast": "ī",
+    "ipa": "iː",
+    "audio": "/assets/audio/ii-matra.mp3",
+    "strokeSvg": "/assets/strokes/ii-matra.svg",
+    "examples": [
+      {
+        "hi": "की",
+        "base": "क",
+        "en": "kee",
+        "ipa": "kiː",
+        "audio": "/assets/audio/kee.mp3"
+      },
+      {
+        "hi": "गी",
+        "base": "ग",
+        "en": "gee",
+        "ipa": "ɡiː",
+        "audio": "/assets/audio/gee.mp3"
+      }
+    ],
+    "hints": ["This matra creates the long 'ee' sound (like 'see'). It appears before the consonant."],
+    "position": "left"
+  },
+  {
+    "id": "u-matra",
+    "script": "ु",
+    "name_hi": "उ की मात्रा",
+    "category": "matra",
+    "roman": "u",
+    "iast": "u",
+    "ipa": "ʊ",
+    "audio": "/assets/audio/u-matra.mp3",
+    "strokeSvg": "/assets/strokes/u-matra.svg",
+    "examples": [
+      {
+        "hi": "कु",
+        "base": "क",
+        "en": "ku",
+        "ipa": "kʊ",
+        "audio": "/assets/audio/ku.mp3"
+      },
+      {
+        "hi": "गु",
+        "base": "ग",
+        "en": "gu",
+        "ipa": "ɡʊ",
+        "audio": "/assets/audio/gu.mp3"
+      }
+    ],
+    "hints": ["This matra creates the 'u' sound (like 'put'). It appears below the consonant."],
+    "position": "below"
+  },
+  {
+    "id": "uu-matra",
+    "script": "ू",
+    "name_hi": "ऊ की मात्रा",
+    "category": "matra",
+    "roman": "ū",
+    "iast": "ū",
+    "ipa": "uː",
+    "audio": "/assets/audio/uu-matra.mp3",
+    "strokeSvg": "/assets/strokes/uu-matra.svg",
+    "examples": [
+      {
+        "hi": "कू",
+        "base": "क",
+        "en": "koo",
+        "ipa": "kuː",
+        "audio": "/assets/audio/koo.mp3"
+      },
+      {
+        "hi": "गू",
+        "base": "ग",
+        "en": "goo",
+        "ipa": "ɡuː",
+        "audio": "/assets/audio/goo.mp3"
+      }
+    ],
+    "hints": ["This matra creates the long 'oo' sound (like 'moon'). It appears below the consonant."],
+    "position": "below"
+  },
+  {
+    "id": "e-matra",
+    "script": "े",
+    "name_hi": "ए की मात्रा",
+    "category": "matra",
+    "roman": "e",
+    "iast": "e",
+    "ipa": "eː",
+    "audio": "/assets/audio/e-matra.mp3",
+    "strokeSvg": "/assets/strokes/e-matra.svg",
+    "examples": [
+      {
+        "hi": "के",
+        "base": "क",
+        "en": "ke",
+        "ipa": "keː",
+        "audio": "/assets/audio/ke.mp3"
+      },
+      {
+        "hi": "गे",
+        "base": "ग",
+        "en": "ge",
+        "ipa": "ɡeː",
+        "audio": "/assets/audio/ge.mp3"
+      }
+    ],
+    "hints": ["This matra creates the 'e' sound (like 'they'). It appears above the consonant."],
+    "position": "above"
+  },
+  {
+    "id": "ai-matra",
+    "script": "ै",
+    "name_hi": "ऐ की मात्रा",
+    "category": "matra",
+    "roman": "ai",
+    "iast": "ai",
+    "ipa": "əi",
+    "audio": "/assets/audio/ai-matra.mp3",
+    "strokeSvg": "/assets/strokes/ai-matra.svg",
+    "examples": [
+      {
+        "hi": "कै",
+        "base": "क",
+        "en": "kai",
+        "ipa": "kəi",
+        "audio": "/assets/audio/kai.mp3"
+      },
+      {
+        "hi": "गै",
+        "base": "ग",
+        "en": "gai",
+        "ipa": "ɡəi",
+        "audio": "/assets/audio/gai.mp3"
+      }
+    ],
+    "hints": ["This matra creates the 'ai' diphthong (like 'eye'). It appears above the consonant."],
+    "position": "above"
+  },
+  {
+    "id": "o-matra",
+    "script": "ो",
+    "name_hi": "ओ की मात्रा",
+    "category": "matra",
+    "roman": "o",
+    "iast": "o",
+    "ipa": "oː",
+    "audio": "/assets/audio/o-matra.mp3",
+    "strokeSvg": "/assets/strokes/o-matra.svg",
+    "examples": [
+      {
+        "hi": "को",
+        "base": "क",
+        "en": "ko",
+        "ipa": "koː",
+        "audio": "/assets/audio/koo.mp3"
+      },
+      {
+        "hi": "गो",
+        "base": "ग",
+        "en": "go",
+        "ipa": "ɡoː",
+        "audio": "/assets/audio/go.mp3"
+      }
+    ],
+    "hints": ["This matra creates the 'o' sound (like 'go'). It appears to the right of the consonant."],
+    "position": "right"
+  },
+  {
+    "id": "au-matra",
+    "script": "ौ",
+    "name_hi": "औ की मात्रा",
+    "category": "matra",
+    "roman": "au",
+    "iast": "au",
+    "ipa": "əu",
+    "audio": "/assets/audio/au-matra.mp3",
+    "strokeSvg": "/assets/strokes/au-matra.svg",
+    "examples": [
+      {
+        "hi": "कौ",
+        "base": "क",
+        "en": "kau",
+        "ipa": "kəu",
+        "audio": "/assets/audio/kau.mp3"
+      },
+      {
+        "hi": "गौ",
+        "base": "ग",
+        "en": "gau",
+        "ipa": "ɡəu",
+        "audio": "/assets/audio/gau.mp3"
+      }
+    ],
+    "hints": ["This matra creates the 'au' diphthong (like 'out'). It appears to the right of the consonant."],
+    "position": "right"
+  },
+  {
+    "id": "an-matra",
+    "script": "ं",
+    "name_hi": "अं की मात्रा",
+    "category": "matra",
+    "roman": "aṃ",
+    "iast": "aṃ",
+    "ipa": "ə̃",
+    "audio": "/assets/audio/an-matra.mp3",
+    "strokeSvg": "/assets/strokes/an-matra.svg",
+    "examples": [
+      {
+        "hi": "कं",
+        "base": "क",
+        "en": "kan",
+        "ipa": "kə̃",
+        "audio": "/assets/audio/kan.mp3"
+      },
+      {
+        "hi": "गं",
+        "base": "ग",
+        "en": "gan",
+        "ipa": "ɡə̃",
+        "audio": "/assets/audio/gan.mp3"
+      }
+    ],
+    "hints": ["This matra makes the preceding consonant nasal. Often sounds like 'n' or 'm' depending on context."],
+    "position": "above"
+  },
+  {
+    "id": "ah-matra",
+    "script": "ः",
+    "name_hi": "अः की मात्रा",
+    "category": "matra",
+    "roman": "aḥ",
+    "iast": "aḥ",
+    "ipa": "əh",
+    "audio": "/assets/audio/ah-matra.mp3",
+    "strokeSvg": "/assets/strokes/ah-matra.svg",
+    "examples": [
+      {
+        "hi": "कः",
+        "base": "क",
+        "en": "kah",
+        "ipa": "kəh",
+        "audio": "/assets/audio/kah.mp3"
+      },
+      {
+        "hi": "गः",
+        "base": "ग",
+        "en": "gah",
+        "ipa": "ɡəh",
+        "audio": "/assets/audio/gah.mp3"
+      }
+    ],
+    "hints": ["This matra adds a soft breath after the consonant, like whispering 'h'."],
+    "position": "above"
+  },
+  {
+    "id": "virama",
+    "script": "्",
+    "name_hi": "हलन्त",
+    "category": "matra",
+    "roman": "halant",
+    "iast": "halant",
+    "ipa": "",
+    "audio": "/assets/audio/virama.mp3",
+    "strokeSvg": "/assets/strokes/virama.svg",
+    "examples": [
+      {
+        "hi": "क्",
+        "base": "क",
+        "en": "k",
+        "ipa": "k",
+        "audio": "/assets/audio/k-virama.mp3"
+      },
+      {
+        "hi": "ग्",
+        "base": "ग",
+        "en": "g",
+        "ipa": "ɡ",
+        "audio": "/assets/audio/g-virama.mp3"
+      }
+    ],
+    "hints": ["This symbol cancels the inherent vowel sound. Used to form conjuncts or standalone consonants."],
+    "position": "below"
+  }
+]

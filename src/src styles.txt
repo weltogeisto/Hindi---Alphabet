@@ -1,0 +1,340 @@
+/* Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utility classes */
+@layer components {
+  .card-shadow {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .glass-card {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .accent-gradient {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  }
+
+  .stroke-path {
+    fill: none;
+    stroke: #6366f1;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .stroke-path-drawing {
+    animation: draw-stroke 1s ease-out forwards;
+  }
+
+  .confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+    z-index: 1000;
+  }
+
+  @keyframes draw-stroke {
+    to {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .pulse {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+  .bounce {
+    animation: bounce 0.6s ease-out;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Accessibility: high contrast mode */
+  [data-theme="high-contrast"] {
+    --bg-primary: #000;
+    --bg-secondary: #111;
+    --text-primary: #fff;
+    --text-secondary: #ccc;
+    --accent: #ff0;
+    --border: #fff;
+  }
+
+  [data-theme="high-contrast"] .card-shadow {
+    box-shadow: 0 0 0 2px var(--border);
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    
+    .stroke-path-drawing {
+      animation: none !important;
+      stroke-dasharray: none !important;
+    }
+  }
+}
+
+/* Custom fonts */
+@font-face {
+  font-family: 'Noto Sans Devanagari';
+  src: url('/assets/fonts/NotoSansDevanagari-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans Devanagari';
+  src: url('/assets/fonts/NotoSansDevanagari-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans Devanagari';
+  src: url('/assets/fonts/NotoSansDevanagari-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Global styles */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background-color: #f9fafb;
+}
+
+/* Devanagari specific styling */
+.devanagari {
+  font-family: 'Noto Sans Devanagari', serif;
+  font-size: 2.5rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.large-devanagari {
+  font-family: 'Noto Sans Devanagari', serif;
+  font-size: 4rem;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+/* Focus styles */
+:focus {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+/* Hide visually but keep accessible */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Touch targets */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile-first navbar */
+.navbar-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+}
+
+.navbar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0;
+  color: #6b7280;
+  transition: color 0.2s ease;
+}
+
+.navbar-item.active {
+  color: #6366f1;
+}
+
+.navbar-item svg {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 0.25rem;
+}
+
+/* Toast notifications */
+.toast {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  z-index: 100;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.5s ease-out;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 1rem;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Progress rings */
+.progress-ring {
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+.progress-ring circle {
+  transition: stroke-dasharray 0.3s ease;
+}
+
+/* Animated confetti */
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* High contrast theme */
+[data-theme="high-contrast"] body {
+  background-color: #000;
+  color: #fff;
+}
+
+[data-theme="high-contrast"] .card-shadow {
+  box-shadow: 0 0 0 2px #fff;
+}
+
+[data-theme="high-contrast"] .glass-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #fff;
+}
+
+[data-theme="high-contrast"] .navbar-bottom {
+  background-color: rgba(0, 0, 0, 0.9);
+  border-top: 1px solid #fff;
+}
+
+[data-theme="high-contrast"] .toast {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* Dyslexia-friendly mode */
+[data-dyslexia="true"] .devanagari {
+  letter-spacing: 0.1em;
+}
+
+[data-dyslexia="true"] .matra {
+  text-decoration: underline;
+  text-decoration-color: #6366f1;
+  text-decoration-thickness: 2px;
+}
+
+[data-dyslexia="true"] .stroke-path {
+  stroke: #6366f1;
+  stroke-width: 3;
+}

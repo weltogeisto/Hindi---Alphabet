@@ -1,0 +1,327 @@
+/**
+ * State management and persistence layer for the Hindi Alphabet Learning App
+ * Uses localStorage for persistence, IndexedDB if needed for larger datasets
+ */
+
+interface AppState {
+  streak: number;
+  xp: number;
+  mastery: Record<string, number>; // letterId -> level 0-5
+  dailyGoal: number;
+  lastPracticeDate: string | null;
+  totalSessions: number;
+  badges: string[];
+  srsState: Record<string, SRSItem>;
+  settings: {
+    ttsVoice: string;
+    audioSpeed: number;
+    reducedMotion: boolean;
+    dyslexiaFriendly: boolean;
+    highContrast: boolean;
+    preferredLanguage: 'en' | 'hi';
+  };
+}
+
+interface SRSItem {
+  id: string;
+  interval: number;
+  easeFactor: number;
+  repetitions: number;
+  nextReview: number;
+  due: boolean;
+  leechCount: number;
+  status: 'new' | 'learning' | 'review' | 'mastered' | 'suspended';
+}
+
+const STORAGE_KEY = 'hindiAlphabetState';
+const DEFAULT_STATE: AppState = {
+  streak: 0,
+  xp: 0,
+  mastery: {},
+  dailyGoal: 10,
+  lastPracticeDate: null,
+  totalSessions: 0,
+  badges: [],
+  srsState: {},
+  settings: {
+    ttsVoice: '',
+    audioSpeed: 1.0,
+    reducedMotion: false,
+    dyslexiaFriendly: false,
+    highContrast: false,
+    preferredLanguage: 'en',
+  },
+};
+
+export function initStore() {
+  // Load state from localStorage
+  const savedState = localStorage.getItem(STORAGE_KEY);
+  let state: AppState;
+  
+  if (savedState) {
+    try {
+      state = JSON.parse(savedState);
+      // Ensure backward compatibility
+      if (!state.settings) {
+        state.settings = DEFAULT_STATE.settings;
+      }
+      if (!state.mastery) {
+        state.mastery = {};
+      }
+      if (!state.srsState) {
+        state.srsState = {};
+      }
+    } catch (e) {
+      console.error('Failed to parse saved state, using defaults', e);
+      state = { ...DEFAULT_STATE };
+    }
+  } else {
+    state = { ...DEFAULT_STATE };
+  }
+  
+  // Initialize SRS state with default values if empty
+  if (Object.keys(state.srsState).length === 0) {
+    initializeDefaultSRSState(state);
+  }
+  
+  // Save state to localStorage
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  
+  // Apply user preferences
+  applyPreferences(state.settings);
+  
+  // Return the state object for use in other modules
+  return state;
+}
+
+function initializeDefaultSRSState(state: AppState) {
+  // Import core letters data
+  fetch('/data/letters.core.json')
+    .then(response => response.json())
+    .then(data => {
+      data.forEach((item: any) => {
+        state.srsState[item.id] = {
+          id: item.id,
+          interval: 1,
+          easeFactor: 2.5,
+          repetitions: 0,
+          nextReview: Date.now(),
+          due: true,
+          leechCount: 0,
+          status: 'new'
+        };
+      });
+      
+      // Initialize matras
+      fetch('/data/letters.matras.json')
+        .then(response => response.json())
+        .then(matras => {
+          matras.forEach((item: any) => {
+            state.srsState[item.id] = {
+              id: item.id,
+              interval: 1,
+              easeFactor: 2.5,
+              repetitions: 0,
+              nextReview: Date.now(),
+              due: true,
+              leechCount: 0,
+              status: 'new'
+            };
+          });
+          
+          // Initialize conjuncts
+          fetch('/data/letters.conjuncts.json')
+            .then(response => response.json())
+            .then(conjuncts => {
+              conjuncts.forEach((item: any) => {
+                state.srsState[item.id] = {
+                  id: item.id,
+                  interval: 1,
+                  easeFactor: 2.5,
+                  repetitions: 0,
+                  nextReview: Date.now(),
+                  due: true,
+                  leechCount: 0,
+                  status: 'new'
+                };
+              });
+              
+              // Save updated state
+              localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+            })
+            .catch(console.error);
+        })
+        .catch(console.error);
+    })
+    .catch(console.error);
+}
+
+export function getStore(): AppState {
+  const savedState = localStorage.getItem(STORAGE_KEY);
+  if (savedState) {
+    return JSON.parse(savedState);
+  }
+  return DEFAULT_STATE;
+}
+
+export function updateStore(updates: Partial<AppState>) {
+  const current = getStore();
+  const newState = { ...current, ...updates };
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(newState));
+  applyPreferences(newState.settings);
+  return newState;
+}
+
+export function addXP(amount: number) {
+  const state = getStore();
+  const newState = {
+    ...state,
+    xp: state.xp + amount,
+    totalSessions: state.totalSessions + 1
+  };
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(newState));
+  return newState;
+}
+
+export function incrementStreak() {
+  const state = getStore();
+  const today = new Date().toISOString().split('T')[0];
+  const lastDate = state.lastPracticeDate;
+  
+  let newStreak = state.streak;
+  
+  if (!lastDate || lastDate === today) {
+    // Already practiced today
+  } else {
+    const yesterday = new Date(today);
+    yesterday.setDate(yesterday.getDate() - 1);
+    
+    if (!lastDate || lastDate === yesterday.toISOString().split('T')[0]) {
+      // Consecutive day!
+      newStreak = state.streak + 1;
+    } else {
+      // Broke streak, restart
+      newStreak = 1;
+    }
+  }
+  
+  const newState = {
+    ...state,
+    streak: newStreak,
+    lastPracticeDate: today
+  };
+  
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(newState));
+  
+  // Award badge if milestone reached
+  if (newStreak === 7) {
+    awardBadge('7-day-streak');
+  } else if (newStreak === 30) {
+    awardBadge('30-day-streak');
+  }
+  
+  return newState;
+}
+
+export function awardBadge(badgeId: string) {
+  const state = getStore();
+  if (!state.badges.includes(badgeId)) {
+    const newState = {
+      ...state,
+      badges: [...state.badges, badgeId]
+    };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(newState));
+    showNotification('🎉 Badge unlocked!', `You earned the "${getBadgeName(badgeId)}" badge!`);
+  }
+}
+
+function getBadgeName(badgeId: string): string {
+  const badgeNames: Record<string, string> = {
+    'first-10': 'First 10 Letters',
+    'full-vowels': 'Full Vowels Master',
+    '7-day-streak': '7-Day Streak',
+    '30-day-streak': '30-Day Streak',
+    'master-all': 'Master All Letters',
+    'perfect-session': 'Perfect Session',
+    'quick-recall': 'Quick Recall',
+    'no-errors': 'No Errors Today',
+  };
+  
+  return badgeNames[badgeId] || badgeId;
+}
+
+export function exportData(): string {
+  const state = getStore();
+  return JSON.stringify(state, null, 2);
+}
+
+export function importData( string): boolean {
+  try {
+    const parsed = JSON.parse(data);
+    if (parsed && typeof parsed === 'object') {
+      localStorage.setItem(STORAGE_KEY, data);
+      applyPreferences(parsed.settings || {});
+      return true;
+    }
+  } catch (e) {
+    console.error('Invalid import data', e);
+  }
+  return false;
+}
+
+export function resetProgress() {
+  if (confirm('Are you sure you want to reset all progress? This cannot be undone.')) {
+    localStorage.removeItem(STORAGE_KEY);
+    window.location.reload();
+  }
+}
+
+export function applyPreferences(settings: AppState['settings']) {
+  // Apply theme
+  if (settings.highContrast) {
+    document.documentElement.setAttribute('data-theme', 'high-contrast');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+  
+  // Apply dyslexia mode
+  if (settings.dyslexiaFriendly) {
+    document.documentElement.setAttribute('data-dyslexia', 'true');
+  } else {
+    document.documentElement.removeAttribute('data-dyslexia');
+  }
+  
+  // Apply reduced motion
+  if (settings.reducedMotion) {
+    document.documentElement.style.setProperty('--motion-enabled', 'false');
+  } else {
+    document.documentElement.style.setProperty('--motion-enabled', 'true');
+  }
+  
+  // Set audio speed (this will be handled by TTS module)
+  if (settings.audioSpeed !== 1.0) {
+    // Handled by TTS module
+  }
+}
+
+export function showNotification(message: string, subtitle?: string) {
+  // Create toast notification
+  const toast = document.createElement('div');
+  toast.className = 'toast bg-black text-white px-4 py-3 rounded-full shadow-lg fixed top-4 left-1/2 transform -translate-x-1/2 z-50 animate-slide-in';
+  toast.innerHTML = `
+    <div class="flex items-center gap-2">
+      <span>${message}</span>
+      ${subtitle ? `<span class="text-sm opacity-75">(${subtitle})</span>` : ''}
+    </div>
+  `;
+  
+  document.body.appendChild(toast);
+  
+  // Auto-remove after 3 seconds
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    setTimeout(() => {
+      document.body.removeChild(toast);
+    }, 300);
+  }, 3000);
+}

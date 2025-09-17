@@ -1,0 +1,433 @@
+/**
+ * Spaced Repetition System (SM-2 Algorithm Implementation)
+ * Based on SuperMemo algorithm version 2
+ * 
+ * Key concepts:
+ * - Interval: Days until next review
+ * - Ease factor: Multiplier for increasing intervals
+ * - Repetitions: Number of times card has been correctly recalled
+ * - Due: Whether card is ready for review
+ * - Leeched: Cards that are repeatedly answered incorrectly
+ */
+
+import { getStore, updateStore, showNotification } from './store';
+
+interface SRSItem {
+  id: string;
+  interval: number;
+  easeFactor: number;
+  repetitions: number;
+  nextReview: number;
+  due: boolean;
+  leechCount: number;
+  status: 'new' | 'learning' | 'review' | 'mastered' | 'suspended';
+}
+
+interface SM2Settings {
+  initialEaseFactor: number;
+  easyBonus: number;
+  hardIntervalMultiplier: number;
+  goodIntervalMultiplier: number;
+  againIntervalMultiplier: number;
+  newCardsPerDay: number;
+  maxReviewsPerDay: number;
+  leechThreshold: number;
+  leechAction: 'suspend' | 'reset' | 'ignore';
+  defaultIntervalDays: number;
+  intervalModifiers: Record<string, number>;
+  reviewSchedule: Record<string, number>;
+}
+
+// Default settings
+const DEFAULT_SETTINGS: SM2Settings = {
+  initialEaseFactor: 2.5,
+  easyBonus: 1.3,
+  hardIntervalMultiplier: 1.2,
+  goodIntervalMultiplier: 1.5,
+  againIntervalMultiplier: 0.2,
+  newCardsPerDay: 10,
+  maxReviewsPerDay: 100,
+  leechThreshold: 8,
+  leechAction: 'suspend',
+  defaultIntervalDays: 1,
+  intervalModifiers: {
+    vowel: 1.2,
+    consonant: 1.0,
+    matra: 1.1,
+    conjunct: 0.9
+  },
+  reviewSchedule: {
+    again: 0,
+    hard: 1,
+    good: 3,
+    easy: 7
+  }
+};
+
+// Load settings from defaults
+let settings: SM2Settings = DEFAULT_SETTINGS;
+
+// Initialize SRS system
+export function initSRS() {
+  // Load settings from storage
+  fetch('/data/srs.defaults.json')
+    .then(response => response.json())
+    .then(customSettings => {
+      settings = { ...DEFAULT_SETTINGS, ...customSettings };
+      console.log('SRS Settings loaded:', settings);
+    })
+    .catch(error => {
+      console.warn('Could not load custom SRS settings, using defaults', error);
+    });
+}
+
+// Get all cards that are due for review
+export function getDueCards(): SRSItem[] {
+  const state = getStore();
+  const now = Date.now();
+  
+  // Filter cards that are due
+  const dueCards = Object.values(state.srsState)
+    .filter(card => card.due && card.nextReview <= now)
+    .sort((a, b) => a.nextReview - b.nextReview); // Sort by earliest due
+  
+  return dueCards;
+}
+
+// Get count of due cards
+export function getDueCount(): number {
+  return getDueCards().length;
+}
+
+// Get cards by category
+export function getCardsByCategory(category: string): SRSItem[] {
+  const state = getStore();
+  const allCards = Object.values(state.srsState);
+  
+  // First, load letter data to map categories
+  return Promise.all([
+    fetch('/data/letters.core.json').then(r => r.json()),
+    fetch('/data/letters.matras.json').then(r => r.json()),
+    fetch('/data/letters.conjuncts.json').then(r => r.json())
+  ]).then(([core, matras, conjuncts]) => {
+    const categoryMap: Record<string, string> = {};
+    
+    // Map core letters
+    core.forEach(item => categoryMap[item.id] = item.category);
+    // Map matras
+    matras.forEach(item => categoryMap[item.id] = item.category);
+    // Map conjuncts
+    conjuncts.forEach(item => categoryMap[item.id] = item.category);
+    
+    return allCards.filter(card => categoryMap[card.id] === category);
+  });
+}
+
+// Get card by ID
+export function getCard(id: string): SRSItem | undefined {
+  const state = getStore();
+  return state.srsState[id];
+}
+
+// Process a card rating
+export async function rateCard(id: string, rating: 'again' | 'hard' | 'good' | 'easy'): Promise<void> {
+  const state = getStore();
+  const card = state.srsState[id];
+  
+  if (!card) {
+    console.error('Card not found:', id);
+    return;
+  }
+  
+  // Calculate new interval and ease factor based on SM-2 algorithm
+  let newInterval: number;
+  let newEaseFactor: number;
+  let newRepetitions: number;
+  let newLeechCount: number;
+  let newStatus: SRSItem['status'];
+  
+  // Calculate new interval based on rating
+  switch (rating) {
+    case 'again':
+      newInterval = Math.floor(settings.defaultIntervalDays * settings.againIntervalMultiplier);
+      newEaseFactor = Math.max(1.3, card.easeFactor - 0.2);
+      newRepetitions = 0;
+      newLeechCount = card.leechCount + 1;
+      newStatus = 'learning';
+      break;
+      
+    case 'hard':
+      newInterval = Math.floor(card.interval * settings.hardIntervalMultiplier);
+      newEaseFactor = Math.max(1.3, card.easeFactor - 0.1);
+      newRepetitions = card.repetitions;
+      newLeechCount = card.leechCount;
+      newStatus = 'learning';
+      break;
+      
+    case 'good':
+      newInterval = Math.floor(card.interval * settings.goodIntervalMultiplier);
+      newEaseFactor = card.easeFactor;
+      newRepetitions = card.repetitions + 1;
+      newLeechCount = card.leechCount;
+      newStatus = card.repetitions >= 3 ? 'mastered' : 'review';
+      break;
+      
+    case 'easy':
+      newInterval = Math.floor(card.interval * settings.easyBonus * settings.goodIntervalMultiplier);
+      newEaseFactor = Math.min(3.0, card.easeFactor + 0.1);
+      newRepetitions = card.repetitions + 1;
+      newLeechCount = card.leechCount;
+      newStatus = card.repetitions >= 3 ? 'mastered' : 'review';
+      break;
+  }
+  
+  // Handle leech cards
+  if (newLeechCount >= settings.leechThreshold) {
+    if (settings.leechAction === 'suspend') {
+      newStatus = 'suspended';
+      showNotification(⚠️ Card suspended', 'This card has been marked as a leech. Try learning it differently.');
+    } else if (settings.leechAction === 'reset') {
+      newLeechCount = 0;
+      newStatus = 'learning';
+    }
+  }
+  
+  // Apply interval modifiers based on category
+  const category = getCategoryForCard(id);
+  if (category && settings.intervalModifiers[category]) {
+    newInterval = Math.floor(newInterval * settings.intervalModifiers[category]);
+  }
+  
+  // Calculate next review date
+  const nextReview = Date.now() + (newInterval * 24 * 60 * 60 * 1000);
+  
+  // Update card state
+  const updatedCard: SRSItem = {
+    ...card,
+    interval: newInterval,
+    easeFactor: newEaseFactor,
+    repetitions: newRepetitions,
+    nextReview: nextReview,
+    due: true,
+    leechCount: newLeechCount,
+    status: newStatus
+  };
+  
+  // Update mastery level (0-5)
+  let masteryLevel = 0;
+  if (newStatus === 'mastered' && newRepetitions >= 5) {
+    masteryLevel = 5;
+  } else if (newStatus === 'mastered' && newRepetitions >= 3) {
+    masteryLevel = 4;
+  } else if (newStatus === 'review' && newRepetitions >= 2) {
+    masteryLevel = 3;
+  } else if (newStatus === 'learning' && newRepetitions >= 1) {
+    masteryLevel = 2;
+  } else if (newStatus === 'new') {
+    masteryLevel = 1;
+  }
+  
+  // Update global state
+  const newState = {
+    ...state,
+    srsState: {
+      ...state.srsState,
+      [id]: updatedCard
+    }
+  };
+  
+  // Update mastery level
+  newState.mastery[id] = masteryLevel;
+  
+  // Update store
+  updateStore(newState);
+  
+  // Give XP for successful recall
+  if (rating === 'good' || rating === 'easy') {
+    const xpReward = rating === 'easy' ? 10 : rating === 'good' ? 5 : rating === 'hard' ? 2 : 1;
+    addXP(xpReward);
+  }
+  
+  // Check for achievements
+  checkAchievements();
+  
+  // Play haptic feedback on mobile
+  if ('vibrate' in navigator) {
+    navigator.vibrate([50, 50, 50]);
+  }
+  
+  // Show appropriate feedback message
+  showFeedbackMessage(rating, newInterval);
+}
+
+function getCategoryForCard(id: string): string | undefined {
+  // Load category data
+  return Promise.all([
+    fetch('/data/letters.core.json').then(r => r.json()),
+    fetch('/data/letters.matras.json').then(r => r.json()),
+    fetch('/data/letters.conjuncts.json').then(r => r.json())
+  ]).then(([core, matras, conjuncts]) => {
+    const allItems = [...core, ...matras, ...conjuncts];
+    const item = allItems.find(i => i.id === id);
+    return item?.category;
+  });
+}
+
+function showFeedbackMessage(rating: 'again' | 'hard' | 'good' | 'easy', interval: number) {
+  const messages: Record<string, string> = {
+    again: "Nearly there—listen once more and try again.",
+    hard: "Good effort! Keep practicing this one.",
+    good: "Nice recall! अगला कार्ड तैयार है.",
+    easy: "Excellent! You've mastered this one."
+  };
+  
+  const intervalText = interval === 0 ? "soon" : `${interval} day${interval !== 1 ? 's' : ''}`;
+  const fullMessage = `${messages[rating]} Next review: ${intervalText}.`;
+  
+  showNotification(messages[rating], `Next review: ${intervalText}`);
+}
+
+function addXP(amount: number) {
+  const state = getStore();
+  const newState = {
+    ...state,
+    xp: state.xp + amount
+  };
+  updateStore(newState);
+}
+
+function checkAchievements() {
+  const state = getStore();
+  
+  // Check for "First 10 letters" badge
+  const masteredLetters = Object.values(state.mastery).filter(level => level >= 3).length;
+  if (masteredLetters >= 10 && !state.badges.includes('first-10')) {
+    awardBadge('first-10');
+  }
+  
+  // Check for "Full Vowels" badge
+  const vowels = ['a', 'aa', 'i', 'ii', 'u', 'uu', 'ri', 'e', 'ai', 'o', 'au', 'an', 'ah'];
+  const masteredVowels = vowels.filter(v => state.mastery[v] >= 5).length;
+  if (masteredVowels === vowels.length && !state.badges.includes('full-vowels')) {
+    awardBadge('full-vowels');
+  }
+  
+  // Check for "Master All Letters" badge
+  const allCards = [...Object.keys(state.mastery)];
+  const masteredAll = allCards.length > 0 && allCards.every(id => state.mastery[id] >= 5);
+  if (masteredAll && !state.badges.includes('master-all')) {
+    awardBadge('master-all');
+  }
+  
+  // Check for "Perfect Session" badge
+  if (state.xp % 100 === 0 && state.xp > 0 && !state.badges.includes('perfect-session')) {
+    awardBadge('perfect-session');
+  }
+}
+
+function awardBadge(badgeId: string) {
+  const state = getStore();
+  if (!state.badges.includes(badgeId)) {
+    const newState = {
+      ...state,
+      badges: [...state.badges, badgeId]
+    };
+    updateStore(newState);
+    showNotification('🎉 Badge unlocked!', `You earned the "${getBadgeName(badgeId)}" badge!`);
+  }
+}
+
+function getBadgeName(badgeId: string): string {
+  const badgeNames: Record<string, string> = {
+    'first-10': 'First 10 Letters',
+    'full-vowels': 'Full Vowels Master',
+    '7-day-streak': '7-Day Streak',
+    '30-day-streak': '30-Day Streak',
+    'master-all': 'Master All Letters',
+    'perfect-session': 'Perfect Session',
+    'quick-recall': 'Quick Recall',
+    'no-errors': 'No Errors Today',
+  };
+  
+  return badgeNames[badgeId] || badgeId;
+}
+
+// Get statistics for dashboard
+export function getSRSStats() {
+  const state = getStore();
+  const totalCards = Object.keys(state.srsState).length;
+  const dueCards = getDueCards().length;
+  const masteredCards = Object.values(state.mastery).filter(level => level >= 5).length;
+  const learningCards = Object.values(state.mastery).filter(level => level >= 1 && level < 5).length;
+  
+  return {
+    totalCards,
+    dueCards,
+    masteredCards,
+    learningCards,
+    completionRate: totalCards > 0 ? Math.round((masteredCards / totalCards) * 100) : 0,
+    streak: state.streak,
+    xp: state.xp
+  };
+}
+
+// Reset a specific card
+export function resetCard(id: string) {
+  const state = getStore();
+  const card = state.srsState[id];
+  
+  if (card) {
+    const resetCard: SRSItem = {
+      ...card,
+      interval: 1,
+      easeFactor: 2.5,
+      repetitions: 0,
+      nextReview: Date.now(),
+      due: true,
+      leechCount: 0,
+      status: 'new'
+    };
+    
+    const newState = {
+      ...state,
+      srsState: {
+        ...state.srsState,
+        [id]: resetCard
+      }
+    };
+    
+    updateStore(newState);
+    showNotification('🔄 Card reset', 'This card has been reset to beginner level.');
+  }
+}
+
+// Force review all cards
+export function forceReviewAll() {
+  const state = getStore();
+  const newState = {
+    ...state,
+    srsState: Object.keys(state.srsState).reduce((acc, id) => {
+      acc[id] = {
+        ...state.srsState[id],
+        due: true,
+        nextReview: Date.now()
+      };
+      return acc;
+    }, {} as Record<string, SRSItem>)
+  };
+  
+  updateStore(newState);
+  showNotification('🔁 Review all cards', 'All cards have been scheduled for immediate review.');
+}
+
+// Get all cards sorted by next review
+export function getAllCardsSorted(): SRSItem[] {
+  const state = getStore();
+  return Object.values(state.srsState).sort((a, b) => a.nextReview - b.nextReview);
+}
+
+// Get cards by status
+export function getCardsByStatus(status: SRSItem['status']): SRSItem[] {
+  const state = getStore();
+  return Object.values(state.srsState).filter(card => card.status === status);
+}

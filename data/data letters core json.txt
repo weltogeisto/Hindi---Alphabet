@@ -1,0 +1,1227 @@
+[
+  {
+    "id": "a",
+    "script": "अ",
+    "name_hi": "अ",
+    "category": "vowel",
+    "roman": "a",
+    "iast": "a",
+    "ipa": "ə",
+    "audio": "/assets/audio/a.mp3",
+    "strokeSvg": "/assets/strokes/a.svg",
+    "keywords": ["central", "mid", "unrounded"],
+    "examples": [
+      {
+        "hi": "अमर",
+        "en": "immortal",
+        "ipa": "əmər",
+        "audio": "/assets/audio/amar.mp3"
+      }
+    ],
+    "hints": ["Like 'a' in 'about'. Short, neutral vowel sound."],
+    "pairings": {
+      "matras": [],
+      "conjuncts": []
+    }
+  },
+  {
+    "id": "aa",
+    "script": "आ",
+    "name_hi": "आ",
+    "category": "vowel",
+    "roman": "ā",
+    "iast": "ā",
+    "ipa": "aː",
+    "audio": "/assets/audio/aa.mp3",
+    "strokeSvg": "/assets/strokes/aa.svg",
+    "keywords": ["back", "open", "unrounded"],
+    "examples": [
+      {
+        "hi": "आम",
+        "en": "mango",
+        "ipa": "aːm",
+        "audio": "/assets/audio/aam.mp3"
+      }
+    ],
+    "hints": ["Long 'a' like 'father'. Hold the sound longer than अ."],
+    "pairings": {
+      "matras": [],
+      "conjuncts": []
+    }
+  },
+  {
+    "id": "i",
+    "script": "इ",
+    "name_hi": "इ",
+    "category": "vowel",
+    "roman": "i",
+    "iast": "i",
+    "ipa": "ɪ",
+    "audio": "/assets/audio/i.mp3",
+    "strokeSvg": "/assets/strokes/i.svg",
+    "keywords": ["front", "close", "unrounded"],
+    "examples": [
+      {
+        "hi": "इंद्र",
+        "en": "Indra",
+        "ipa": "ɪndrə",
+        "audio": "/assets/audio/indra.mp3"
+      }
+    ],
+    "hints": ["Short 'i' like 'sit'. Don't say 'eye'."],
+    "pairings": {
+      "matras": [],
+      "conjuncts": []
+    }
+  },
+  {
+    "id": "ii",
+    "script": "ई",
+    "name_hi": "ई",
+    "category": "vowel",
+    "roman": "ī",
+    "iast": "ī",
+    "ipa": "iː",
+    "audio": "/assets/audio/ii.mp3",
+    "strokeSvg": "/assets/strokes/ii.svg",
+    "keywords": ["front", "close", "unrounded"],
+    "examples": [
+      {
+        "hi": "ईख",
+        "en": "eagle",
+        "ipa": "iːkʰ",
+        "audio": "/assets/audio/eekh.mp3"
+      }
+    ],
+    "hints": ["Long 'ee' like 'see'. Stretch the sound."],
+    "pairings": {
+      "matras": [],
+      "conjuncts": []
+    }
+  },
+  {
+    "id": "u",
+    "script": "उ",
+    "name_hi": "उ",
+    "category": "vowel",
+    "roman": "u",
+    "iast": "u",
+    "ipa": "ʊ",
+    "audio": "/assets/audio/u.mp3",
+    "strokeSvg": "/assets/strokes/u.svg",
+    "keywords": ["back", "close", "rounded"],
+    "examples": [
+      {
+        "hi": "उप",
+        "en": "up",
+        "ipa": "ʊp",
+        "audio": "/assets/audio/up.mp3"
+      }
+    ],
+    "hints": ["Short 'u' like 'put'. Rounded lips."],
+    "pairings": {
+      "matras": [],
+      "conjuncts": []
+    }
+  },
+  {
+    "id": "uu",
+    "script": "ऊ",
+    "name_hi": "ऊ",
+    "category": "vowel",
+    "roman": "ū",
+    "iast": "ū",
+    "ipa": "uː",
+    "audio": "/assets/audio/uu.mp3",
+    "strokeSvg": "/assets/strokes/uu.svg",
+    "keywords": ["back", "close", "rounded"],
+    "examples": [
+      {
+        "hi": "ऊँचा",
+        "en": "tall",
+        "ipa": "uːntʃaː",
+        "audio": "/assets/audio/ooncha.mp3"
+      }
+    ],
+    "hints": ["Long 'oo' like 'moon'. Round lips tightly."],
+    "pairings": {
+      "matras": [],
+      "conjuncts": []
+    }
+  },
+  {
+    "id": "ri",
+    "script": "ऋ",
+    "name_hi": "ऋ",
+    "category": "vowel",
+    "roman": "ṛ",
+    "iast": "ṛ",
+    "ipa": "ɾ̩",
+    "audio": "/assets/audio/ri.mp3",
+    "strokeSvg": "/assets/strokes/ri.svg",
+    "keywords": ["retroflex", "vocalic"],
+    "examples": [
+      {
+        "hi": "ऋषि",
+        "en": "sage",
+        "ipa": "ɾ̩ʂi",
+        "audio": "/assets/audio/rishi.mp3"
+      }
+    ],
+    "hints": ["Unique sound - tongue curled back slightly while making 'ri'. Like 'ri' in 'rigid' but more syllabic."],
+    "pairings": {
+      "matras": [],
+      "conjuncts": []
+    }
+  },
+  {
+    "id": "e",
+    "script": "ए",
+    "name_hi": "ए",
+    "category": "vowel",
+    "roman": "e",
+    "iast": "e",
+    "ipa": "eː",
+    "audio": "/assets/audio/e.mp3",
+    "strokeSvg": "/assets/strokes/e.svg",
+    "keywords": ["front", "mid", "unrounded"],
+    "examples": [
+      {
+        "hi": "एक",
+        "en": "one",
+        "ipa": "eːk",
+        "audio": "/assets/audio/ek.mp3"
+      }
+    ],
+    "hints": ["Long 'ay' like 'say'. Not 'eh' as in 'bed'."],
+    "pairings": {
+      "matras": [],
+      "conjuncts": []
+    }
+  },
+  {
+    "id": "ai",
+    "script": "ऐ",
+    "name_hi": "ऐ",
+    "category": "vowel",
+    "roman": "ai",
+    "iast": "ai",
+    "ipa": "əi",
+    "audio": "/assets/audio/ai.mp3",
+    "strokeSvg": "/assets/strokes/ai.svg",
+    "keywords": ["diphthong", "front"],
+    "examples": [
+      {
+        "hi": "ऐसा",
+        "en": "like this",
+        "ipa": "əisə",
+        "audio": "/assets/audio/aisa.mp3"
+      }
+    ],
+    "hints": ["Start with 'uh' and glide to 'ee' like 'eye'. But shorter than English 'I'."],
+    "pairings": {
+      "matras": [],
+      "conjuncts": []
+    }
+  },
+  {
+    "id": "o",
+    "script": "ओ",
+    "name_hi": "ओ",
+    "category": "vowel",
+    "roman": "o",
+    "iast": "o",
+    "ipa": "oː",
+    "audio": "/assets/audio/o.mp3",
+    "strokeSvg": "/assets/strokes/o.svg",
+    "keywords": ["back", "mid", "rounded"],
+    "examples": [
+      {
+        "hi": "ओट",
+        "en": "edge",
+        "ipa": "oːʈ",
+        "audio": "/assets/audio/ot.mp3"
+      }
+    ],
+    "hints": ["Long 'o' like 'go'. Round lips."],
+    "pairings": {
+      "matras": [],
+      "conjuncts": []
+    }
+  },
+  {
+    "id": "au",
+    "script": "औ",
+    "name_hi": "औ",
+    "category": "vowel",
+    "roman": "au",
+    "iast": "au",
+    "ipa": "əu",
+    "audio": "/assets/audio/au.mp3",
+    "strokeSvg": "/assets/strokes/au.svg",
+    "keywords": ["diphthong", "back"],
+    "examples": [
+      {
+        "hi": "और",
+        "en": "and",
+        "ipa": "əuɾ",
+        "audio": "/assets/audio/aur.mp3"
+      }
+    ],
+    "hints": ["Start with 'uh' and glide to 'oo' like 'out'. But smoother."],
+    "pairings": {
+      "matras": [],
+      "conjuncts": []
+    }
+  },
+  {
+    "id": "an",
+    "script": "अं",
+    "name_hi": "अं",
+    "category": "vowel",
+    "roman": "aṃ",
+    "iast": "aṃ",
+    "ipa": "ə̃",
+    "audio": "/assets/audio/an.mp3",
+    "strokeSvg": "/assets/strokes/an.svg",
+    "keywords": ["nasalized", "central"],
+    "examples": [
+      {
+        "hi": "अंग",
+        "en": "limb",
+        "ipa": "əŋɡ",
+        "audio": "/assets/audio/ang.mp3"
+      }
+    ],
+    "hints": ["Nasalized 'a' - let air flow through nose. Like 'on' without the 'n' sound."],
+    "pairings": {
+      "matras": [],
+      "conjuncts": []
+    }
+  },
+  {
+    "id": "ah",
+    "script": "अः",
+    "name_hi": "अः",
+    "category": "vowel",
+    "roman": "aḥ",
+    "iast": "aḥ",
+    "ipa": "əh",
+    "audio": "/assets/audio/ah.mp3",
+    "strokeSvg": "/assets/strokes/ah.svg",
+    "keywords": ["visarga", "glottal"],
+    "examples": [
+      {
+        "hi": "अहः",
+        "en": "exclamation",
+        "ipa": "əhə",
+        "audio": "/assets/audio/aha.mp3"
+      }
+    ],
+    "hints": ["A soft breath after 'a' - like whispering 'ah!' at the end of a word."],
+    "pairings": {
+      "matras": [],
+      "conjuncts": []
+    }
+  },
+  {
+    "id": "ka",
+    "script": "क",
+    "name_hi": "क",
+    "category": "consonant",
+    "roman": "ka",
+    "iast": "ka",
+    "ipa": "kə",
+    "audio": "/assets/audio/ka.mp3",
+    "strokeSvg": "/assets/strokes/ka.svg",
+    "keywords": ["velar", "unaspirated", "stop"],
+    "examples": [
+      {
+        "hi": "कमल",
+        "en": "lotus",
+        "ipa": "kəməl",
+        "audio": "/assets/audio/kamal.mp3"
+      }
+    ],
+    "hints": ["Unaspirated 'k', like 'skirt' not 'kite'. Tongue touches soft palate."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["क्त","क्र","क्ष"]
+    }
+  },
+  {
+    "id": "kha",
+    "script": "ख",
+    "name_hi": "ख",
+    "category": "consonant",
+    "roman": "kha",
+    "iast": "khā",
+    "ipa": "kʰə",
+    "audio": "/assets/audio/kha.mp3",
+    "strokeSvg": "/assets/strokes/kha.svg",
+    "keywords": ["velar", "aspirated", "stop"],
+    "examples": [
+      {
+        "hi": "खेल",
+        "en": "game",
+        "ipa": "kʰeːl",
+        "audio": "/assets/audio/khel.mp3"
+      }
+    ],
+    "hints": ["Aspirated 'k' - strong puff of air after release, like 'kite'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["ख्य","खण"]
+    }
+  },
+  {
+    "id": "ga",
+    "script": "ग",
+    "name_hi": "ग",
+    "category": "consonant",
+    "roman": "ga",
+    "iast": "ga",
+    "ipa": "ɡə",
+    "audio": "/assets/audio/ga.mp3",
+    "strokeSvg": "/assets/strokes/ga.svg",
+    "keywords": ["velar", "unaspirated", "stop", "voiced"],
+    "examples": [
+      {
+        "hi": "गाना",
+        "en": "to sing",
+        "ipa": "ɡaːnaː",
+        "audio": "/assets/audio/gana.mp3"
+      }
+    ],
+    "hints": ["Voiced 'g' like 'go'. Tongue touches soft palate."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["ग्र","ग्न"]
+    }
+  },
+  {
+    "id": "gha",
+    "script": "घ",
+    "name_hi": "घ",
+    "category": "consonant",
+    "roman": "gha",
+    "iast": "gha",
+    "ipa": "ɡʱə",
+    "audio": "/assets/audio/gha.mp3",
+    "strokeSvg": "/assets/strokes/gha.svg",
+    "keywords": ["velar", "aspirated", "stop", "voiced"],
+    "examples": [
+      {
+        "hi": "घर",
+        "en": "house",
+        "ipa": "ɡʱər",
+        "audio": "/assets/audio/ghar.mp3"
+      }
+    ],
+    "hints": ["Voiced aspirated 'g' - like 'ghost' but stronger breath. Tongue touches soft palate."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["घट","घन"]
+    }
+  },
+  {
+    "id": "nga",
+    "script": "ङ",
+    "name_hi": "ङ",
+    "category": "consonant",
+    "roman": "ṅa",
+    "iast": "ṅa",
+    "ipa": "ŋə",
+    "audio": "/assets/audio/nga.mp3",
+    "strokeSvg": "/assets/strokes/nga.svg",
+    "keywords": ["velar", "nasal"],
+    "examples": [
+      {
+        "hi": "ङ्क",
+        "en": "sound",
+        "ipa": "ŋkə",
+        "audio": "/assets/audio/ngka.mp3"
+      }
+    ],
+    "hints": ["Like 'ng' in 'sing'. Nasal sound made at the back of the mouth."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["ङ्ग"]
+    }
+  },
+  {
+    "id": "ca",
+    "script": "च",
+    "name_hi": "च",
+    "category": "consonant",
+    "roman": "ca",
+    "iast": "ca",
+    "ipa": "t͡ɕə",
+    "audio": "/assets/audio/ca.mp3",
+    "strokeSvg": "/assets/strokes/ca.svg",
+    "keywords": ["palatal", "unaspirated", "stop"],
+    "examples": [
+      {
+        "hi": "चाय",
+        "en": "tea",
+        "ipa": "t͡ɕaːj",
+        "audio": "/assets/audio/chai.mp3"
+      }
+    ],
+    "hints": ["Palatal 'ch' like 'cheese'. Tongue touches hard palate."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["च्च","च्छ"]
+    }
+  },
+  {
+    "id": "cha",
+    "script": "छ",
+    "name_hi": "छ",
+    "category": "consonant",
+    "roman": "cha",
+    "iast": "chā",
+    "ipa": "t͡ɕʰə",
+    "audio": "/assets/audio/cha.mp3",
+    "strokeSvg": "/assets/strokes/cha.svg",
+    "keywords": ["palatal", "aspirated", "stop"],
+    "examples": [
+      {
+        "hi": "छत",
+        "en": "roof",
+        "ipa": "t͡ɕʰət",
+        "audio": "/assets/audio/chhat.mp3"
+      }
+    ],
+    "hints": ["Aspirated 'ch' - strong puff of air after release, like 'chew'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["छत","छिद्र"]
+    }
+  },
+  {
+    "id": "ja",
+    "script": "ज",
+    "name_hi": "ज",
+    "category": "consonant",
+    "roman": "ja",
+    "iast": "ja",
+    "ipa": "d͡ʑə",
+    "audio": "/assets/audio/ja.mp3",
+    "strokeSvg": "/assets/strokes/ja.svg",
+    "keywords": ["palatal", "unaspirated", "stop", "voiced"],
+    "examples": [
+      {
+        "hi": "जल",
+        "en": "water",
+        "ipa": "d͡ʑəl",
+        "audio": "/assets/audio/jal.mp3"
+      }
+    ],
+    "hints": ["Voiced palatal 'j' like 'jam'. Tongue touches hard palate."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["ज्ञ","ज्ज"]
+    }
+  },
+  {
+    "id": "jha",
+    "script": "झ",
+    "name_hi": "झ",
+    "category": "consonant",
+    "roman": "jha",
+    "iast": "jha",
+    "ipa": "d͡ʑʱə",
+    "audio": "/assets/audio/jha.mp3",
+    "strokeSvg": "/assets/strokes/jha.svg",
+    "keywords": ["palatal", "aspirated", "stop", "voiced"],
+    "examples": [
+      {
+        "hi": "झूल",
+        "en": "swing",
+        "ipa": "d͡ʑʱuːl",
+        "audio": "/assets/audio/jhool.mp3"
+      }
+    ],
+    "hints": ["Voiced aspirated 'j' - strong breath after release, like 'joke' but more forceful."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["झट","झल"]
+    }
+  },
+  {
+    "id": "nya",
+    "script": "ञ",
+    "name_hi": "ञ",
+    "category": "consonant",
+    "roman": "ña",
+    "iast": "ña",
+    "ipa": "ɲə",
+    "audio": "/assets/audio/nya.mp3",
+    "strokeSvg": "/assets/strokes/nya.svg",
+    "keywords": ["palatal", "nasal"],
+    "examples": [
+      {
+        "hi": "ञ्च",
+        "en": "sound",
+        "ipa": "ɲt͡ɕə",
+        "audio": "/assets/audio/nyacha.mp3"
+      }
+    ],
+    "hints": ["Like 'ny' in 'canyon'. Nasal sound made at the hard palate."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["ञ्च","ञ्ज"]
+    }
+  },
+  {
+    "id": "ta",
+    "script": "ट",
+    "name_hi": "ट",
+    "category": "consonant",
+    "roman": "ṭa",
+    "iast": "ṭa",
+    "ipa": "ʈə",
+    "audio": "/assets/audio/ta.mp3",
+    "strokeSvg": "/assets/strokes/ta.svg",
+    "keywords": ["retroflex", "unaspirated", "stop"],
+    "examples": [
+      {
+        "hi": "टॉम",
+        "en": "Tom",
+        "ipa": "ʈɔːm",
+        "audio": "/assets/audio/tom.mp3"
+      }
+    ],
+    "hints": ["Retroflex 't' - tongue curls back. Different from English 't'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["ट्ट","ट्र"]
+    }
+  },
+  {
+    "id": "tha",
+    "script": "ठ",
+    "name_hi": "ठ",
+    "category": "consonant",
+    "roman": "ṭha",
+    "iast": "ṭhā",
+    "ipa": "ʈʰə",
+    "audio": "/assets/audio/tha.mp3",
+    "strokeSvg": "/assets/strokes/tha.svg",
+    "keywords": ["retroflex", "aspirated", "stop"],
+    "examples": [
+      {
+        "hi": "ठीक",
+        "en": "right",
+        "ipa": "ʈʰiːk",
+        "audio": "/assets/audio/theek.mp3"
+      }
+    ],
+    "hints": ["Retroflex aspirated 't' - strong puff of air after curling tongue back."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["ठण","ठक"]
+    }
+  },
+  {
+    "id": "da",
+    "script": "ड",
+    "name_hi": "ड",
+    "category": "consonant",
+    "roman": "ḍa",
+    "iast": "ḍa",
+    "ipa": "ɖə",
+    "audio": "/assets/audio/da.mp3",
+    "strokeSvg": "/assets/strokes/da.svg",
+    "keywords": ["retroflex", "unaspirated", "stop", "voiced"],
+    "examples": [
+      {
+        "hi": "डॉक्टर",
+        "en": "doctor",
+        "ipa": "ɖɔkʈər",
+        "audio": "/assets/audio/doctor.mp3"
+      }
+    ],
+    "hints": ["Retroflex voiced 'd' - tongue curls back. Different from English 'd'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["ड्ड","ड्र"]
+    }
+  },
+  {
+    "id": "dha",
+    "script": "ढ",
+    "name_hi": "ढ",
+    "category": "consonant",
+    "roman": "ḍha",
+    "iast": "ḍha",
+    "ipa": "ɖʱə",
+    "audio": "/assets/audio/dha.mp3",
+    "strokeSvg": "/assets/strokes/dha.svg",
+    "keywords": ["retroflex", "aspirated", "stop", "voiced"],
+    "examples": [
+      {
+        "hi": "ढोल",
+        "en": "drum",
+        "ipa": "ɖʱoːl",
+        "audio": "/assets/audio/dhol.mp3"
+      }
+    ],
+    "hints": ["Retroflex voiced aspirated 'dh' - strong breath after curling tongue back."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["ढ्र","ढक"]
+    }
+  },
+  {
+    "id": "na",
+    "script": "ण",
+    "name_hi": "ण",
+    "category": "consonant",
+    "roman": "ṇa",
+    "iast": "ṇa",
+    "ipa": "ɳə",
+    "audio": "/assets/audio/na.mp3",
+    "strokeSvg": "/assets/strokes/na.svg",
+    "keywords": ["retroflex", "nasal"],
+    "examples": [
+      {
+        "hi": "णम",
+        "en": "sound",
+        "ipa": "ɳəm",
+        "audio": "/assets/audio/nam.mp3"
+      }
+    ],
+    "hints": ["Retroflex nasal 'n' - tongue curls back. Like 'n' in 'sin' but further back."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["ण्ड","ण्य"]
+    }
+  },
+  {
+    "id": "ta",
+    "script": "त",
+    "name_hi": "त",
+    "category": "consonant",
+    "roman": "ta",
+    "iast": "ta",
+    "ipa": "t̪ə",
+    "audio": "/assets/audio/ta1.mp3",
+    "strokeSvg": "/assets/strokes/ta1.svg",
+    "keywords": ["dental", "unaspirated", "stop"],
+    "examples": [
+      {
+        "hi": "तार",
+        "en": "string",
+        "ipa": "t̪aːr",
+        "audio": "/assets/audio/taar.mp3"
+      }
+    ],
+    "hints": ["Dental 't' - tongue touches teeth. Different from English 't'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["त्र","त्त"]
+    }
+  },
+  {
+    "id": "tha",
+    "script": "थ",
+    "name_hi": "थ",
+    "category": "consonant",
+    "roman": "tha",
+    "iast": "thā",
+    "ipa": "t̪ʰə",
+    "audio": "/assets/audio/tha1.mp3",
+    "strokeSvg": "/assets/strokes/tha1.svg",
+    "keywords": ["dental", "aspirated", "stop"],
+    "examples": [
+      {
+        "hi": "थाली",
+        "en": "plate",
+        "ipa": "t̪ʰaːliː",
+        "audio": "/assets/audio/thali.mp3"
+      }
+    ],
+    "hints": ["Dental aspirated 'th' - strong puff of air after tongue touches teeth."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["थ्र","थक"]
+    }
+  },
+  {
+    "id": "da",
+    "script": "द",
+    "name_hi": "द",
+    "category": "consonant",
+    "roman": "da",
+    "iast": "da",
+    "ipa": "d̪ə",
+    "audio": "/assets/audio/da1.mp3",
+    "strokeSvg": "/assets/strokes/da1.svg",
+    "keywords": ["dental", "unaspirated", "stop", "voiced"],
+    "examples": [
+      {
+        "hi": "दरवाजा",
+        "en": "door",
+        "ipa": "d̪ərʋaːʒaː",
+        "audio": "/assets/audio/darwaza.mp3"
+      }
+    ],
+    "hints": ["Dental voiced 'd' - tongue touches teeth. Different from English 'd'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["द्र","द्ध"]
+    }
+  },
+  {
+    "id": "dha",
+    "script": "ध",
+    "name_hi": "ध",
+    "category": "consonant",
+    "roman": "dha",
+    "iast": "dha",
+    "ipa": "d̪ʱə",
+    "audio": "/assets/audio/dha1.mp3",
+    "strokeSvg": "/assets/strokes/dha1.svg",
+    "keywords": ["dental", "aspirated", "stop", "voiced"],
+    "examples": [
+      {
+        "hi": "धूम",
+        "en": "smoke",
+        "ipa": "d̪ʱuːm",
+        "audio": "/assets/audio/dhum.mp3"
+      }
+    ],
+    "hints": ["Dental voiced aspirated 'dh' - strong breath after tongue touches teeth."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["ध्र","धक"]
+    }
+  },
+  {
+    "id": "na",
+    "script": "न",
+    "name_hi": "न",
+    "category": "consonant",
+    "roman": "na",
+    "iast": "na",
+    "ipa": "nə",
+    "audio": "/assets/audio/na1.mp3",
+    "strokeSvg": "/assets/strokes/na1.svg",
+    "keywords": ["dental", "nasal"],
+    "examples": [
+      {
+        "hi": "नमक",
+        "en": "salt",
+        "ipa": "nəmək",
+        "audio": "/assets/audio/namak.mp3"
+      }
+    ],
+    "hints": ["Dental nasal 'n' - tongue touches teeth. Different from English 'n'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["न्त","न्न"]
+    }
+  },
+  {
+    "id": "pa",
+    "script": "प",
+    "name_hi": "प",
+    "category": "consonant",
+    "roman": "pa",
+    "iast": "pa",
+    "ipa": "pə",
+    "audio": "/assets/audio/pa.mp3",
+    "strokeSvg": "/assets/strokes/pa.svg",
+    "keywords": ["bilabial", "unaspirated", "stop"],
+    "examples": [
+      {
+        "hi": "पानी",
+        "en": "water",
+        "ipa": "paːniː",
+        "audio": "/assets/audio/paani.mp3"
+      }
+    ],
+    "hints": ["Bilabial 'p' - lips together. Unaspirated, like 'spit'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["प्र","प्प"]
+    }
+  },
+  {
+    "id": "pha",
+    "script": "फ",
+    "name_hi": "फ",
+    "category": "consonant",
+    "roman": "pha",
+    "iast": "phā",
+    "ipa": "pʰə",
+    "audio": "/assets/audio/pha.mp3",
+    "strokeSvg": "/assets/strokes/pha.svg",
+    "keywords": ["bilabial", "aspirated", "stop"],
+    "examples": [
+      {
+        "hi": "फूल",
+        "en": "flower",
+        "ipa": "pʰuːl",
+        "audio": "/assets/audio/phool.mp3"
+      }
+    ],
+    "hints": ["Bilabial aspirated 'ph' - strong puff of air when lips separate, like 'phone'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["फ्र","फक"]
+    }
+  },
+  {
+    "id": "ba",
+    "script": "ब",
+    "name_hi": "ब",
+    "category": "consonant",
+    "roman": "ba",
+    "iast": "ba",
+    "ipa": "bə",
+    "audio": "/assets/audio/ba.mp3",
+    "strokeSvg": "/assets/strokes/ba.svg",
+    "keywords": ["bilabial", "unaspirated", "stop", "voiced"],
+    "examples": [
+      {
+        "hi": "बाबा",
+        "en": "father",
+        "ipa": "baːbaː",
+        "audio": "/assets/audio/baba.mp3"
+      }
+    ],
+    "hints": ["Bilabial voiced 'b' - lips together. Like 'boy'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["ब्र","ब्ब"]
+    }
+  },
+  {
+    "id": "bha",
+    "script": "भ",
+    "name_hi": "भ",
+    "category": "consonant",
+    "roman": "bha",
+    "iast": "bha",
+    "ipa": "bʱə",
+    "audio": "/assets/audio/bha.mp3",
+    "strokeSvg": "/assets/strokes/bha.svg",
+    "keywords": ["bilabial", "aspirated", "stop", "voiced"],
+    "examples": [
+      {
+        "hi": "भाई",
+        "en": "brother",
+        "ipa": "bʱaːiː",
+        "audio": "/assets/audio/bhai.mp3"
+      }
+    ],
+    "hints": ["Bilabial voiced aspirated 'bh' - strong breath after lips separate, like 'behind'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["भ्र","भक"]
+    }
+  },
+  {
+    "id": "ma",
+    "script": "म",
+    "name_hi": "म",
+    "category": "consonant",
+    "roman": "ma",
+    "iast": "ma",
+    "ipa": "mə",
+    "audio": "/assets/audio/ma.mp3",
+    "strokeSvg": "/assets/strokes/ma.svg",
+    "keywords": ["bilabial", "nasal"],
+    "examples": [
+      {
+        "hi": "माता",
+        "en": "mother",
+        "ipa": "maːtaː",
+        "audio": "/assets/audio/mata.mp3"
+      }
+    ],
+    "hints": ["Bilabial nasal 'm' - lips together, air flows through nose. Like 'mom'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["म्प","म्म"]
+    }
+  },
+  {
+    "id": "ya",
+    "script": "य",
+    "name_hi": "य",
+    "category": "consonant",
+    "roman": "ya",
+    "iast": "ya",
+    "ipa": "jə",
+    "audio": "/assets/audio/ya.mp3",
+    "strokeSvg": "/assets/strokes/ya.svg",
+    "keywords": ["palatal", "approximant"],
+    "examples": [
+      {
+        "hi": "यात्रा",
+        "en": "journey",
+        "ipa": "jaːtraː",
+        "audio": "/assets/audio/yatra.mp3"
+      }
+    ],
+    "hints": ["Like 'y' in 'yes'. Palatal approximant - tongue near hard palate."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["य्य","य्र"]
+    }
+  },
+  {
+    "id": "ra",
+    "script": "र",
+    "name_hi": "र",
+    "category": "consonant",
+    "roman": "ra",
+    "iast": "ra",
+    "ipa": "rə",
+    "audio": "/assets/audio/ra.mp3",
+    "strokeSvg": "/assets/strokes/ra.svg",
+    "keywords": ["alveolar", "trill", "approximant"],
+    "examples": [
+      {
+        "hi": "राम",
+        "en": "Rama",
+        "ipa": "raːm",
+        "audio": "/assets/audio/ram.mp3"
+      }
+    ],
+    "hints": ["Light trill or tap - tongue taps alveolar ridge once. Not rolled like Spanish 'rr'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["र्य","र्र"]
+    }
+  },
+  {
+    "id": "la",
+    "script": "ल",
+    "name_hi": "ल",
+    "category": "consonant",
+    "roman": "la",
+    "iast": "la",
+    "ipa": "lə",
+    "audio": "/assets/audio/la.mp3",
+    "strokeSvg": "/assets/strokes/la.svg",
+    "keywords": ["alveolar", "lateral"],
+    "examples": [
+      {
+        "hi": "लाल",
+        "en": "red",
+        "ipa": "laːl",
+        "audio": "/assets/audio/lal.mp3"
+      }
+    ],
+    "hints": ["Lateral 'l' - tongue tip on alveolar ridge, air flows around sides. Like 'light'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["ल्ल","ल्ह"]
+    }
+  },
+  {
+    "id": "va",
+    "script": "व",
+    "name_hi": "व",
+    "category": "consonant",
+    "roman": "va",
+    "iast": "va",
+    "ipa": "ʋə",
+    "audio": "/assets/audio/va.mp3",
+    "strokeSvg": "/assets/strokes/va.svg",
+    "keywords": ["labiodental", "approximant"],
+    "examples": [
+      {
+        "hi": "वाणी",
+        "en": "speech",
+        "ipa": "ʋaːniː",
+        "audio": "/assets/audio/vaani.mp3"
+      }
+    ],
+    "hints": ["Labiodental 'v' - upper teeth touch lower lip. Like 'very'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["व्र","व्व"]
+    }
+  },
+  {
+    "id": "sha",
+    "script": "श",
+    "name_hi": "श",
+    "category": "consonant",
+    "roman": "śa",
+    "iast": "śa",
+    "ipa": "ɕə",
+    "audio": "/assets/audio/sha.mp3",
+    "strokeSvg": "/assets/strokes/sha.svg",
+    "keywords": ["palatal", "fricative"],
+    "examples": [
+      {
+        "hi": "शाम",
+        "en": "evening",
+        "ipa": "ɕaːm",
+        "audio": "/assets/audio/shaam.mp3"
+      }
+    ],
+    "hints": ["Palatal 'sh' - tongue near hard palate. Like 'sheep'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["श्र","श्च"]
+    }
+  },
+  {
+    "id": "sha2",
+    "script": "ष",
+    "name_hi": "ष",
+    "category": "consonant",
+    "roman": "ṣa",
+    "iast": "ṣa",
+    "ipa": "ʂə",
+    "audio": "/assets/audio/sha2.mp3",
+    "strokeSvg": "/assets/strokes/sha2.svg",
+    "keywords": ["retroflex", "fricative"],
+    "examples": [
+      {
+        "hi": "षड्यंत्र",
+        "en": "conspiracy",
+        "ipa": "ʂəɖjəntrə",
+        "audio": "/assets/audio/sadhyantra.mp3"
+      }
+    ],
+    "hints": ["Retroflex 'sh' - tongue curls back. Similar to 'sh' but further back in mouth."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["ष्ट","ष्ठ"]
+    }
+  },
+  {
+    "id": "sa",
+    "script": "स",
+    "name_hi": "स",
+    "category": "consonant",
+    "roman": "sa",
+    "iast": "sa",
+    "ipa": "sə",
+    "audio": "/assets/audio/sa.mp3",
+    "strokeSvg": "/assets/strokes/sa.svg",
+    "keywords": ["dental", "fricative"],
+    "examples": [
+      {
+        "hi": "साथ",
+        "en": "with",
+        "ipa": "saːtʰ",
+        "audio": "/assets/audio/sath.mp3"
+      }
+    ],
+    "hints": ["Dental 's' - tongue near teeth. Like 'see'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["स्त","स्न"]
+    }
+  },
+  {
+    "id": "ha",
+    "script": "ह",
+    "name_hi": "ह",
+    "category": "consonant",
+    "roman": "ha",
+    "iast": "ha",
+    "ipa": "ɦə",
+    "audio": "/assets/audio/ha.mp3",
+    "strokeSvg": "/assets/strokes/ha.svg",
+    "keywords": ["glottal", "fricative"],
+    "examples": [
+      {
+        "hi": "हाथ",
+        "en": "hand",
+        "ipa": "ɦaːtʰ",
+        "audio": "/assets/audio/hath.mp3"
+      }
+    ],
+    "hints": ["Glottal 'h' - gentle friction in throat. Like 'hello'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": ["ह्न","ह्म"]
+    }
+  },
+  {
+    "id": "ksha",
+    "script": "क्ष",
+    "name_hi": "क्ष",
+    "category": "conjunct",
+    "roman": "kṣa",
+    "iast": "kṣa",
+    "ipa": "kʃə",
+    "audio": "/assets/audio/ksha.mp3",
+    "strokeSvg": "/assets/strokes/ksha.svg",
+    "keywords": ["conjunct", "velar-palatal"],
+    "examples": [
+      {
+        "hi": "क्षमा",
+        "en": "forgiveness",
+        "ipa": "kʃəmaː",
+        "audio": "/assets/audio/kshama.mp3"
+      }
+    ],
+    "hints": ["Combined 'ksh' sound - 'k' followed immediately by 'sh'. Like 'box' + 'ship'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": []
+    }
+  },
+  {
+    "id": "tra",
+    "script": "त्र",
+    "name_hi": "त्र",
+    "category": "conjunct",
+    "roman": "tra",
+    "iast": "tra",
+    "ipa": "t̪ɾə",
+    "audio": "/assets/audio/tra.mp3",
+    "strokeSvg": "/assets/strokes/tra.svg",
+    "keywords": ["conjunct", "dental"],
+    "examples": [
+      {
+        "hi": "त्रिकोण",
+        "en": "triangle",
+        "ipa": "t̪ɾɪkoːɳ",
+        "audio": "/assets/audio/trikon.mp3"
+      }
+    ],
+    "hints": ["Tight cluster - 't' followed immediately by 'r'. Like 'tree' but with dental 't'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": []
+    }
+  },
+  {
+    "id": "gya",
+    "script": "ज्ञ",
+    "name_hi": "ज्ञ",
+    "category": "conjunct",
+    "roman": "jña",
+    "iast": "jña",
+    "ipa": "d͡ʑɲə",
+    "audio": "/assets/audio/gya.mp3",
+    "strokeSvg": "/assets/strokes/gya.svg",
+    "keywords": ["conjunct", "palatal-nasal"],
+    "examples": [
+      {
+        "hi": "ज्ञान",
+        "en": "knowledge",
+        "ipa": "d͡ʑɲaːn",
+        "audio": "/assets/audio/jnana.mp3"
+      }
+    ],
+    "hints": ["Complex blend - 'gy' sound. Pronounced like 'gn' in 'gnome'. Start with 'j' then transition to 'ny'."],
+    "pairings": {
+      "matras": ["ा","ि","ी","ु","ू","े","ै","ो","ौ","ं","ः","्"],
+      "conjuncts": []
+    }
+  }
+]

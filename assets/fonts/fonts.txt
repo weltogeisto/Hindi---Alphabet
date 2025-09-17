@@ -1,0 +1,6 @@
+Download Noto Sans Devanagari from Google Fonts and place in /assets/fonts:
+- NotoSansDevanagari-Regular.woff2
+- NotoSansDevanagari-Medium.woff2
+- NotoSansDevanagari-Bold.woff2
+
+Ensure proper license compliance (SIL Open Font License).

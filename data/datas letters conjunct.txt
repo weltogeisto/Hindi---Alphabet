@@ -1,0 +1,470 @@
+[
+  {
+    "id": "ksha",
+    "script": "क्ष",
+    "name_hi": "क्ष",
+    "category": "conjunct",
+    "roman": "kṣa",
+    "iast": "kṣa",
+    "ipa": "kʃə",
+    "audio": "/assets/audio/ksha.mp3",
+    "strokeSvg": "/assets/strokes/ksha.svg",
+    "components": ["क", "ष"],
+    "examples": [
+      {
+        "hi": "क्षमा",
+        "en": "forgiveness",
+        "ipa": "kʃəmaː",
+        "audio": "/assets/audio/kshama.mp3"
+      },
+      {
+        "hi": "अक्षर",
+        "en": "letter",
+        "ipa": "əkʃər",
+        "audio": "/assets/audio/akshar.mp3"
+      }
+    ],
+    "hints": ["Combined 'ksh' sound - 'k' followed immediately by 'sh'. Like 'box' + 'ship'. Common in Sanskrit-derived words."]
+  },
+  {
+    "id": "tra",
+    "script": "त्र",
+    "name_hi": "त्र",
+    "category": "conjunct",
+    "roman": "tra",
+    "iast": "tra",
+    "ipa": "t̪ɾə",
+    "audio": "/assets/audio/tra.mp3",
+    "strokeSvg": "/assets/strokes/tra.svg",
+    "components": ["त", "र"],
+    "examples": [
+      {
+        "hi": "त्रिकोण",
+        "en": "triangle",
+        "ipa": "t̪ɾɪkoːɳ",
+        "audio": "/assets/audio/trikon.mp3"
+      },
+      {
+        "hi": "त्रय",
+        "en": "three",
+        "ipa": "t̪ɾəj",
+        "audio": "/assets/audio/tray.mp3"
+      }
+    ],
+    "hints": ["Tight cluster - 't' followed immediately by 'r'. Like 'tree' but with dental 't'. Very common."]
+  },
+  {
+    "id": "gya",
+    "script": "ज्ञ",
+    "name_hi": "ज्ञ",
+    "category": "conjunct",
+    "roman": "jña",
+    "iast": "jña",
+    "ipa": "d͡ʑɲə",
+    "audio": "/assets/audio/gya.mp3",
+    "strokeSvg": "/assets/strokes/gya.svg",
+    "components": ["ज", "ञ"],
+    "examples": [
+      {
+        "hi": "ज्ञान",
+        "en": "knowledge",
+        "ipa": "d͡ʑɲaːn",
+        "audio": "/assets/audio/jnana.mp3"
+      },
+      {
+        "hi": "अज्ञ",
+        "en": "ignorant",
+        "ipa": "əd͡ʑɲə",
+        "audio": "/assets/audio/ajna.mp3"
+      }
+    ],
+    "hints": ["Complex blend - 'gy' sound. Pronounced like 'gn' in 'gnome'. Start with 'j' then transition to 'ny'."]
+  },
+  {
+    "id": "kra",
+    "script": "क्र",
+    "name_hi": "क्र",
+    "category": "conjunct",
+    "roman": "kra",
+    "iast": "kra",
+    "ipa": "krə",
+    "audio": "/assets/audio/kra.mp3",
+    "strokeSvg": "/assets/strokes/kra.svg",
+    "components": ["क", "र"],
+    "examples": [
+      {
+        "hi": "क्रम",
+        "en": "order",
+        "ipa": "krəm",
+        "audio": "/assets/audio/kram.mp3"
+      },
+      {
+        "hi": "क्रिया",
+        "en": "action",
+        "ipa": "krəjiː",
+        "audio": "/assets/audio/kriya.mp3"
+      }
+    ],
+    "hints": ["'k' followed by 'r' - similar to 'cr' in 'crab'. The 'r' has a slight roll."]
+  },
+  {
+    "id": "gra",
+    "script": "ग्र",
+    "name_hi": "ग्र",
+    "category": "conjunct",
+    "roman": "gra",
+    "iast": "gra",
+    "ipa": "ɡrə",
+    "audio": "/assets/audio/gra.mp3",
+    "strokeSvg": "/assets/strokes/gra.svg",
+    "components": ["ग", "र"],
+    "examples": [
+      {
+        "hi": "ग्राम",
+        "en": "village",
+        "ipa": "ɡraːm",
+        "audio": "/assets/audio/gram.mp3"
+      },
+      {
+        "hi": "ग्रह",
+        "en": "planet",
+        "ipa": "ɡrəh",
+        "audio": "/assets/audio/grah.mp3"
+      }
+    ],
+    "hints": ["'g' followed by 'r' - similar to 'gr' in 'green'. The 'r' has a slight roll."]
+  },
+  {
+    "id": "pra",
+    "script": "प्र",
+    "name_hi": "प्र",
+    "category": "conjunct",
+    "roman": "pra",
+    "iast": "pra",
+    "ipa": "prə",
+    "audio": "/assets/audio/pra.mp3",
+    "strokeSvg": "/assets/strokes/pra.svg",
+    "components": ["प", "र"],
+    "examples": [
+      {
+        "hi": "प्रेम",
+        "en": "love",
+        "ipa": "preːm",
+        "audio": "/assets/audio/prem.mp3"
+      },
+      {
+        "hi": "प्रातः",
+        "en": "morning",
+        "ipa": "praːt̪əh",
+        "audio": "/assets/audio/praatoh.mp3"
+      }
+    ],
+    "hints": ["'p' followed by 'r' - similar to 'pr' in 'press'. Strong aspiration possible."]
+  },
+  {
+    "id": "st",
+    "script": "स्त",
+    "name_hi": "स्त",
+    "category": "conjunct",
+    "roman": "sta",
+    "iast": "sta",
+    "ipa": "stə",
+    "audio": "/assets/audio/sta.mp3",
+    "strokeSvg": "/assets/strokes/sta.svg",
+    "components": ["स", "त"],
+    "examples": [
+      {
+        "hi": "स्त्री",
+        "en": "woman",
+        "ipa": "stiː",
+        "audio": "/assets/audio/stree.mp3"
+      },
+      {
+        "hi": "स्थान",
+        "en": "place",
+        "ipa": "stʰaːn",
+        "audio": "/assets/audio/sthaan.mp3"
+      }
+    ],
+    "hints": ["'s' followed by 't' - similar to 'st' in 'star'. Smooth transition between sounds."]
+  },
+  {
+    "id": "shr",
+    "script": "श्र",
+    "name_hi": "श्र",
+    "category": "conjunct",
+    "roman": "śra",
+    "iast": "śra",
+    "ipa": "ɕrə",
+    "audio": "/assets/audio/shra.mp3",
+    "strokeSvg": "/assets/strokes/shra.svg",
+    "components": ["श", "र"],
+    "examples": [
+      {
+        "hi": "श्री",
+        "en": "honorific",
+        "ipa": "ɕriː",
+        "audio": "/assets/audio/shree.mp3"
+      },
+      {
+        "hi": "श्रम",
+        "en": "labor",
+        "ipa": "ɕrəm",
+        "audio": "/assets/audio/shram.mp3"
+      }
+    ],
+    "hints": ["'sh' followed by 'r' - similar to 'sh'+'r' in 'shrink'. The 'r' has a slight roll."]
+  },
+  {
+    "id": "kv",
+    "script": "क्व",
+    "name_hi": "क्व",
+    "category": "conjunct",
+    "roman": "kva",
+    "iast": "kva",
+    "ipa": "kʋə",
+    "audio": "/assets/audio/kva.mp3",
+    "strokeSvg": "/assets/strokes/kva.svg",
+    "components": ["क", "व"],
+    "examples": [
+      {
+        "hi": "क्वचित",
+        "en": "sometimes",
+        "ipa": "kʋətʃit̪",
+        "audio": "/assets/audio/kvachit.mp3"
+      }
+    ],
+    "hints": ["'k' followed by 'v' - similar to 'qu' in 'queen'. A quick transition from 'k' to 'v'."]
+  },
+  {
+    "id": "hn",
+    "script": "ह्न",
+    "name_hi": "ह्न",
+    "category": "conjunct",
+    "roman": "hna",
+    "iast": "hna",
+    "ipa": "hna",
+    "audio": "/assets/audio/hna.mp3",
+    "strokeSvg": "/assets/strokes/hna.svg",
+    "components": ["ह", "न"],
+    "examples": [
+      {
+        "hi": "ह्नान",
+        "en": "old",
+        "ipa": "hnaːn",
+        "audio": "/assets/audio/hnaan.mp3"
+      }
+    ],
+    "hints": ["'h' followed by 'n' - gentle breath followed by nasal sound. Rare but found in classical texts."]
+  },
+  {
+    "id": "nn",
+    "script": "न्न",
+    "name_hi": "न्न",
+    "category": "conjunct",
+    "roman": "nna",
+    "iast": "nna",
+    "ipa": "nːə",
+    "audio": "/assets/audio/nna.mp3",
+    "strokeSvg": "/assets/strokes/nna.svg",
+    "components": ["न", "न"],
+    "examples": [
+      {
+        "hi": "सन्न",
+        "en": "filled",
+        "ipa": "sənːə",
+        "audio": "/assets/audio/sanna.mp3"
+      }
+    ],
+    "hints": ["Double 'n' sound - held longer than single 'n'. Creates emphasis."]
+  },
+  {
+    "id": "tt",
+    "script": "त्त",
+    "name_hi": "त्त",
+    "category": "conjunct",
+    "roman": "tta",
+    "iast": "tta",
+    "ipa": "t̪ːə",
+    "audio": "/assets/audio/tta.mp3",
+    "strokeSvg": "/assets/strokes/tta.svg",
+    "components": ["त", "त"],
+    "examples": [
+      {
+        "hi": "कत्त",
+        "en": "cut",
+        "ipa": "kət̪ːə",
+        "audio": "/assets/audio/katta.mp3"
+      }
+    ],
+    "hints": ["Double 't' sound - held longer than single 't'. Creates emphasis."]
+  },
+  {
+    "id": "mm",
+    "script": "म्म",
+    "name_hi": "म्म",
+    "category": "conjunct",
+    "roman": "mma",
+    "iast": "mma",
+    "ipa": "mːə",
+    "audio": "/assets/audio/mma.mp3",
+    "strokeSvg": "/assets/strokes/mma.svg",
+    "components": ["म", "म"],
+    "examples": [
+      {
+        "hi": "अम्मा",
+        "en": "mother",
+        "ipa": "əmːaː",
+        "audio": "/assets/audio/amma.mp3"
+      }
+    ],
+    "hints": ["Double 'm' sound - held longer than single 'm'. Common in affectionate terms."]
+  },
+  {
+    "id": "dd",
+    "script": "ड्ड",
+    "name_hi": "ड्ड",
+    "category": "conjunct",
+    "roman": "ḍḍa",
+    "iast": "ḍḍa",
+    "ipa": "ɖːə",
+    "audio": "/assets/audio/dda.mp3",
+    "strokeSvg": "/assets/strokes/dda.svg",
+    "components": ["ड", "ड"],
+    "examples": [
+      {
+        "hi": "बड्डा",
+        "en": "big",
+        "ipa": "bəɖːaː",
+        "audio": "/assets/audio/badda.mp3"
+      }
+    ],
+    "hints": ["Double retroflex 'd' sound - held longer than single 'ḍ'. Emphasizes size or intensity."]
+  },
+  {
+    "id": "rt",
+    "script": "र्त",
+    "name_hi": "र्त",
+    "category": "conjunct",
+    "roman": "rta",
+    "iast": "rta",
+    "ipa": "rtə",
+    "audio": "/assets/audio/rt-a.mp3",
+    "strokeSvg": "/assets/strokes/rt-a.svg",
+    "components": ["र", "त"],
+    "examples": [
+      {
+        "hi": "कर्ता",
+        "en": "doer",
+        "ipa": "kərt̪aː",
+        "audio": "/assets/audio/karta.mp3"
+      }
+    ],
+    "hints": ["'r' followed by 't' - the 'r' becomes part of the consonant cluster. Sounds like 'rt' in 'art'."]
+  },
+  {
+    "id": "kt",
+    "script": "क्त",
+    "name_hi": "क्त",
+    "category": "conjunct",
+    "roman": "kta",
+    "iast": "kta",
+    "ipa": "ktə",
+    "audio": "/assets/audio/kt-a.mp3",
+    "strokeSvg": "/assets/strokes/kt-a.svg",
+    "components": ["क", "त"],
+    "examples": [
+      {
+        "hi": "कत्त",
+        "en": "cut",
+        "ipa": "ktə",
+        "audio": "/assets/audio/kat.mp3"
+      }
+    ],
+    "hints": ["'k' followed by 't' - smooth transition between stops. Common in past tense forms."]
+  },
+  {
+    "id": "nk",
+    "script": "ङ्क",
+    "name_hi": "ङ्क",
+    "category": "conjunct",
+    "roman": "ṅka",
+    "iast": "ṅka",
+    "ipa": "ŋkə",
+    "audio": "/assets/audio/nk-a.mp3",
+    "strokeSvg": "/assets/strokes/nk-a.svg",
+    "components": ["ङ", "क"],
+    "examples": [
+      {
+        "hi": "अङ्क",
+        "en": "number",
+        "ipa": "əŋkə",
+        "audio": "/assets/audio/ank.mp3"
+      }
+    ],
+    "hints": ["Nasal 'ng' followed by 'k' - very common in Sanskrit-derived vocabulary."]
+  },
+  {
+    "id": "mp",
+    "script": "म्प",
+    "name_hi": "म्प",
+    "category": "conjunct",
+    "roman": "mpa",
+    "iast": "mpa",
+    "ipa": "mpə",
+    "audio": "/assets/audio/mp-a.mp3",
+    "strokeSvg": "/assets/strokes/mp-a.svg",
+    "components": ["म", "प"],
+    "examples": [
+      {
+        "hi": "अंप",
+        "en": "amp",
+        "ipa": "əmpə",
+        "audio": "/assets/audio/ampa.mp3"
+      }
+    ],
+    "hints": ["Nasal 'm' followed by 'p' - the 'm' transitions directly into 'p'."]
+  },
+  {
+    "id": "chch",
+    "script": "च्च",
+    "name_hi": "च्च",
+    "category": "conjunct",
+    "roman": "ccha",
+    "iast": "ccha",
+    "ipa": "t͡ɕːə",
+    "audio": "/assets/audio/chch-a.mp3",
+    "strokeSvg": "/assets/strokes/chch-a.svg",
+    "components": ["च", "च"],
+    "examples": [
+      {
+        "hi": "चच्चा",
+        "en": "uncle",
+        "ipa": "t͡ɕət͡ɕaː",
+        "audio": "/assets/audio/chachha.mp3"
+      }
+    ],
+    "hints": ["Double 'ch' sound - held longer than single 'ch'. Creates emphasis."]
+  },
+  {
+    "id": "jj",
+    "script": "ज्ज",
+    "name_hi": "ज्ज",
+    "category": "conjunct",
+    "roman": "jja",
+    "iast": "jja",
+    "ipa": "d͡ʑːə",
+    "audio": "/assets/audio/jj-a.mp3",
+    "strokeSvg": "/assets/strokes/jj-a.svg",
+    "components": ["ज", "ज"],
+    "examples": [
+      {
+        "hi": "जज्ज",
+        "en": "grandfather",
+        "ipa": "d͡ʑəd͡ʑə",
+        "audio": "/assets/audio/jajja.mp3"
+      }
+    ],
+    "hints": ["Double 'j' sound - held longer than single 'j'. Common in familial terms."]
+  }
+]
