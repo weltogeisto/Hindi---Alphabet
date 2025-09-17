@@ -1,1 +1,37 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hindi Alphabet Learn - Devanagari</title>
+  <meta name="description" content="Learn the Hindi alphabet with spaced repetition, stroke animations, and audio pronunciation. Offline-capable PWA.">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="icon" href="/assets/icons/favicon.ico">
+  <meta name="theme-color" content="#6366f1">
+  <link rel="stylesheet" href="/src/styles.css">
+  <script type="module" src="/src/main.ts"></script>
+  <!-- Fallback for browsers that don't support ES modules -->
+  <noscript>
+    <div class="bg-red-50 text-red-800 p-4 text-center font-medium">
+      JavaScript is required to use this app. Please enable JavaScript in your browser.
+    </div>
+  </noscript>
+</head>
+<body class="bg-gradient-to-br from-indigo-50 via-white to-purple-50 min-h-screen text-gray-800 font-sans overflow-x-hidden">
+  <div id="app"></div>
+  
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').then(registration => {
+          console.log('SW registered: ', registration);
+        }).catch(registrationError => {
+          console.log('SW registration failed: ', registrationError);
+        });
+      });
+    }
+  </script>
+</body>
+</html>
